@@ -12,7 +12,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="RS232.vi" Type="VI" URL="../RS232.vi"/>
-		<Item Name="Vladina provera.vi" Type="VI" URL="../Vladina provera.vi"/>
+		<Item Name="Front Panel.vi" Type="VI" URL="../Front Panel.vi"/>
 		<Item Name="Globalna_Variabla.vi" Type="VI" URL="../Globalna_Variabla.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
