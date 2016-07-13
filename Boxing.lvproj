@@ -57,6 +57,7 @@
 		<Item Name="Front Panel.vi" Type="VI" URL="../Front Panel.vi"/>
 		<Item Name="Globalna_Variabla.vi" Type="VI" URL="../Globalna_Variabla.vi"/>
 		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
+		<Item Name="def_Score.ctl" Type="VI" URL="../def_Score.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
