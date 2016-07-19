@@ -18,31 +18,39 @@ float threshold;
 
 // Sve se salje kao float string 8 bajta odnostno 6 cifara iza nule !!
 
+
 float recive_data(){
 // poslati dva puta da se aktivira Data Ready
-
 	float treshold[4];
 	int i;
 	float minimum;
-	char prijem[5]; // Malo veci buffer za prijem ne koristi se ceo
+// Malo veci buffer za prijem ne koristi se ceo
+	char prijem[5]; 
+// Brisem stare vrenosti bez ovoga sabira prosle vrednosti
+	treshold[0]=0;
+	treshold[1]=0;
+	treshold[2]=0;
+	treshold[3]=0;
+	minimum=0;
+// Primi jedan karakter 	
 	for (i=0;i<=1;i++){
 		prijem[i]=pc.getc();	
 	}
-
-// Jedan bafer nije na 0, ocistiti ga
+// Racunam srednju vrednost
 	if (prijem[0]=='C'){
 			for(i=1;i<=10;i++){
-	treshold[0]=treshold[0]+Senzor0.read();
-	treshold[1]=treshold[1]+Senzor1.read();
-	treshold[2]=treshold[2]+Senzor2.read();
-	treshold[3]=treshold[3]+Senzor3.read();	
-	}
-			treshold[0]=treshold[0]/10;
-			treshold[1]=treshold[1]/10;
-			treshold[2]=treshold[2]/10;
-			treshold[3]=treshold[3]/10;	
-			minimum=treshold[0]; // Pocni od 1 jer je deifinisan maximum
-			for (i=1;i<=3;i++){
+			treshold[0]=treshold[0]+Senzor0.read();
+			treshold[1]=treshold[1]+Senzor1.read();
+			treshold[2]=treshold[2]+Senzor2.read();
+			treshold[3]=treshold[3]+Senzor3.read();	
+			}
+			treshold[0]=treshold[0]/i;
+			treshold[1]=treshold[1]/i;
+			treshold[2]=treshold[2]/i;
+			treshold[3]=treshold[3]/i;    
+// Racunam minimum - pocni od i=1			
+	    minimum=treshold[0]; 
+			for (i=1;i<=1;i++){
 				if (treshold[i]<minimum){
 					minimum=treshold[i];
 				}
