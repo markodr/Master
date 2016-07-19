@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\MBED_Keil.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\MBED_Keil.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Jul 19 16:45:18 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Jul 19 20:35:09 2016
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -687,7 +687,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[44]"></a>main</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, retarget.o(i.$Sub$$main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = main &rArr; $Super$$main &rArr; mbed::Stream::getc() &rArr; mbed::mbed_getc(std::__FILE*) &rArr; fgetc &rArr; _sys_read &rArr; serial_init &rArr; pinmap_merge &rArr; error &rArr; exit &rArr; mbed_die &rArr;  mbed_assert_internal (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = main &rArr; $Super$$main &rArr; mbed::Stream::getc() &rArr; mbed::mbed_getc(std::__FILE*) &rArr; fgetc &rArr; _sys_read &rArr; serial_init &rArr; pinmap_merge &rArr; error &rArr; exit &rArr; mbed_die &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_main
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
@@ -1390,8 +1390,8 @@ Global Symbols
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
 </UL>
 
-<P><STRONG><a name="[89]"></a>$Super$$main</STRONG> (Thumb, 318 bytes, Stack size 32 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = $Super$$main &rArr; mbed::Stream::getc() &rArr; mbed::mbed_getc(std::__FILE*) &rArr; fgetc &rArr; _sys_read &rArr; serial_init &rArr; pinmap_merge &rArr; error &rArr; exit &rArr; mbed_die &rArr;  mbed_assert_internal (Cycle)
+<P><STRONG><a name="[89]"></a>$Super$$main</STRONG> (Thumb, 298 bytes, Stack size 16 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = $Super$$main &rArr; mbed::Stream::getc() &rArr; mbed::mbed_getc(std::__FILE*) &rArr; fgetc &rArr; _sys_read &rArr; serial_init &rArr; pinmap_merge &rArr; error &rArr; exit &rArr; mbed_die &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_read

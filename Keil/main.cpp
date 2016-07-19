@@ -16,16 +16,17 @@ float senzori[4];
 char prijem[5];
 float threshold;
 
+
 // Sve se salje kao float string 8 bajta odnostno 6 cifara iza nule !!
 
 
 float recive_data(){
-// poslati dva puta da se aktivira Data Ready
-	float treshold[4];
+// Poslati dva puta da se aktivira Data Ready
 	int i;
+	float treshold[4];
 	float minimum;
 // Malo veci buffer za prijem ne koristi se ceo
-	char prijem[5]; 
+	//char prijem[5]; 
 // Brisem stare vrenosti bez ovoga sabira prosle vrednosti
 	treshold[0]=0;
 	treshold[1]=0;
@@ -33,7 +34,7 @@ float recive_data(){
 	treshold[3]=0;
 	minimum=0;
 // Primi jedan karakter 	
-	for (i=0;i<=1;i++){
+	for(i=0;i<1;i++){
 		prijem[i]=pc.getc();	
 	}
 // Racunam srednju vrednost
