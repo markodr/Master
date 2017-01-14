@@ -12,6 +12,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Export podataka.vi" Type="VI" URL="../Export podataka.vi"/>
 		<Item Name="Merenje_1_ACC.vi" Type="VI" URL="../Merenje_1_ACC.vi"/>
+		<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
 		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
 		<Item Name="Training-Master-Slave.vi" Type="VI" URL="../Training-Master-Slave.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -402,6 +403,7 @@
 				<Item Name="subAmplitudeMeasure.vi" Type="VI" URL="/&lt;vilib&gt;/express/express analysis/AmpandLevelBlock.llb/subAmplitudeMeasure.vi"/>
 				<Item Name="subPlayWaveform.vi" Type="VI" URL="/&lt;vilib&gt;/sound2/PlayWaveformSource.llb/subPlayWaveform.vi"/>
 				<Item Name="subStatistics.vi" Type="VI" URL="/&lt;vilib&gt;/express/express analysis/StatisticsBlock.llb/subStatistics.vi"/>
+				<Item Name="subTimeDelay.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/TimeDelayBlock.llb/subTimeDelay.vi"/>
 				<Item Name="Timestamp Add.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/Timestamp Add.vi"/>
 				<Item Name="Timestamp Subtract.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/Timestamp Subtract.vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
