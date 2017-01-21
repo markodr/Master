@@ -12,6 +12,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Export podataka.vi" Type="VI" URL="../Export podataka.vi"/>
 		<Item Name="Merenje_1_ACC.vi" Type="VI" URL="../Merenje_1_ACC.vi"/>
+		<Item Name="Parallel Loops - Pre izmene.vi" Type="VI" URL="../Parallel Loops - Pre izmene.vi"/>
 		<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
 		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
 		<Item Name="Training-Master-Slave.vi" Type="VI" URL="../Training-Master-Slave.vi"/>
@@ -439,7 +440,6 @@
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="matscript.dll" Type="Document"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>

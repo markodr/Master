@@ -1,0 +1,27 @@
+% Brisi pre rucnog importa
+clc;
+close all;
+clear all;
+% Import data
+figure();
+hold on;
+plot(ACC1_X);
+plot(ACC1_Y);
+plot(ACC2_X);
+
+%%
+clc; close all; clear all;
+
+x=0; y=0; z=0; tr=1; score=0;
+sekvenca=[1,2,3,1,6,8];
+% Dinamicki kreiram sekvencu
+prijem = zeros(1,length(sekvenca));
+
+if x>=tr && x>=y && x>=z
+    
+    
+end
+
+
+%%
+clear prijem
