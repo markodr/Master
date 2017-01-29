@@ -11,7 +11,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Export podataka.vi" Type="VI" URL="../Export podataka.vi"/>
-		<Item Name="Merenje_1_ACC.vi" Type="VI" URL="../Merenje_1_ACC.vi"/>
+		<Item Name="Merenje_3_ACC.vi" Type="VI" URL="../Merenje_3_ACC.vi"/>
 		<Item Name="Parallel Loops - Pre izmene.vi" Type="VI" URL="../Parallel Loops - Pre izmene.vi"/>
 		<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
 		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
