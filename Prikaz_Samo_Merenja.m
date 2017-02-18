@@ -1,10 +1,10 @@
-clear all
-close all
-clc
+clear all;
+close all;
+clc;
 filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Cisto_merenje_3_ACC.lvm';
 delimiter = '\t';
 startRow = 24;
-formatSpec = '%s%s%s%s%s%s%s%s%[^\n\r]';
+formatSpec = '%q%q%q%q%q%q%q%q%q%q%q%[^\n\r]';
 fileID = fopen(filename,'r');
 dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'HeaderLines' ,startRow-1, 'ReturnOnError', false);
 fclose(fileID);
@@ -13,7 +13,7 @@ for col=1:length(dataArray)-1
     raw(1:length(dataArray{col}),col) = dataArray{col};
 end
 numericData = NaN(size(dataArray{1},1),size(dataArray,2));
-for col=[2,3,4,5,6,7]
+for col=[2,3,4,5,6,7,8,9,10]
     % Converts strings in the input cell array to numbers. Replaced non-numeric
     % strings with NaN.
     rawData = dataArray{col};
@@ -44,8 +44,8 @@ for col=[2,3,4,5,6,7]
         end
     end
 end
-rawNumericColumns = raw(:, [2,3,4,5,6,7]);
-rawCellColumns = raw(:, [1,8]);
+rawNumericColumns = raw(:, [2,3,4,5,6,7,8,9,10]);
+rawCellColumns = raw(:, [1,11]);
 R = cellfun(@(x) ~isnumeric(x) && ~islogical(x),rawNumericColumns); % Find non-numeric cells
 rawNumericColumns(R) = {NaN}; % Replace non-numeric cells
 X_Value = rawCellColumns(:, 1);
@@ -55,12 +55,15 @@ Zuta2 = cell2mat(rawNumericColumns(:, 3));
 Zelena2 = cell2mat(rawNumericColumns(:, 4));
 Zuta3 = cell2mat(rawNumericColumns(:, 5));
 Zelena3 = cell2mat(rawNumericColumns(:, 6));
+Intezitet_1 = cell2mat(rawNumericColumns(:, 7));
+Intezitet_2 = cell2mat(rawNumericColumns(:, 8));
+Intezitet_3 = cell2mat(rawNumericColumns(:, 9));
 Comment = rawCellColumns(:, 2);
 clearvars filename delimiter startRow formatSpec fileID dataArray ans raw col numericData rawData row regexstr result numbers invalidThousandsSeparator thousandsRegExp me rawNumericColumns rawCellColumns R;
 
 %% ACC 1
 figure('name','Senzor 1');
-title('ACC 1 - Gornji Senzor');
+title('NORMALIZOVANE DVE OSE ACC 1 - Gornji Senzor');
 hold on;
 N_Zelena1=Zelena1-mean(Zelena1);
 plot(N_Zelena1,'g');
@@ -70,9 +73,9 @@ hold off;
 fprintf('\nSenzor 1      %f   %f',sum(N_Zelena1.^2),sum(N_Zuta1.^2));
 legend(num2str(sum(N_Zelena1.^2)),num2str(sum(N_Zuta1.^2)));
 
-%% ACC 2
+% ACC 2
 figure('name','Senzor 2');
-title('ACC 2 - Srednji Senzor');
+title('NORMALIZOVANE DVE OSE ACC 2 - Srednji Senzor');
 hold on;
 N_Zelena2=Zelena2-mean(Zelena2);
 plot(N_Zelena2,'g');
@@ -82,9 +85,9 @@ hold off;
 fprintf('\nSenzor 2      %f   %f',sum(N_Zelena2.^2),sum(N_Zuta2.^2));
 legend(num2str(sum(N_Zelena2.^2)),num2str(sum(N_Zuta2.^2)));
 
-%% ACC 3
+% ACC 3
 figure('name','Senzor 3');
-title('ACC 3 - Donji Senzor');
+title('NORMALIZOVANE DVE OSE ACC 3 - Donji Senzor');
 hold on;
 N_Zelena3=Zelena3-mean(Zelena3);
 plot(N_Zelena3,'g');
@@ -94,46 +97,85 @@ hold off;
 fprintf('\nSenzor 3      %f   %f',sum(N_Zelena3.^2),sum(N_Zuta3.^2));
 legend(num2str(sum(N_Zelena3.^2)),num2str(sum(N_Zuta3.^2)));
 
-%% PRIKAZIVANJE inteziteta
-figure('name','Inteziteti');
-title('Inteziteti - Svi ACC');
+% OFSET
+fprintf('\n');
+fprintf('\nDC Senzor 1      %f   %f',mean(Zuta1),mean(Zelena1));
+fprintf('\nDC Senzor 2      %f   %f',mean(Zuta2),mean(Zelena2));
+fprintf('\nDC Senzor 3      %f   %f',mean(Zuta3),mean(Zelena3));
+fprintf('\n');
+
+%% PRIKAZIVANJE OSA
+
+figure('name','TRI SENZORA');
+title('Prikaz kako se menjaju ose 3 senzora');
 hold on;
-Intezitet_1= N_Zelena1.^2 + N_Zuta1.^2 ;
-plot(Intezitet_1,'y')
-Intezitet_2= N_Zelena2.^2 + N_Zuta2.^2 ;
-plot(Intezitet_2,'b')
-Intezitet_3= N_Zelena3.^2 + N_Zuta3.^2 ;
-plot(Intezitet_3,'g')
+
+plot(Zuta1,'y')
+plot(Zelena1,'y')
+
+plot(Zuta2,'b')
+plot(Zelena2,'b')
+
+
+plot(Zuta3,'g')
+plot(Zelena3,'g')
+
 hold off;
-legend('ACC 1','ACC 2','ACC 3');
+legend('ACC 1 -Zuta','ACC 1 -Zelena'...
+      ,'ACC 2 -Zuta','ACC 1 -Zelena'...
+      ,'ACC 3 -Zuta','ACC 3 -Zelena');
+
 
 fprintf('\n')
 
-% % 
-% % %% Prikazivanje osa
-% % 
-% % figure('name','ose');
-% % title('ose - Svi ACC');
-% % hold on;
-% % plot(N_Bela1);
-% % plot(N_Bela2);
-% % %plot(N_Bela3);
-% % hold off;
-% % fprintf('\n')
+%% PRIKAZIVANJE inteziteta opeglati NaN
+GORE=[];
+for i=1:length(Intezitet_1)
+    if isnan(Intezitet_1(i))
+        continue;
+    else
+        GORE=[GORE,Intezitet_1(i)];
+    end
+end
 
-% % % %% ODBACUJEM PRHIH PAR MERENJA
-% % % pocetak=2;
-% % % 
-% % % tmp=Zuta1(pocetak :length(Zuta1));
-% % % clear Zuta1; Zuta1=tmp; clear tmp;
-% % % tmp=Zuta2(pocetak :length(Zuta2));
-% % % clear Zuta2; Zuta2=tmp; clear tmp;
-% % % tmp=Zuta3(pocetak :length(Zuta3));
-% % % clear Zuta3; Zuta3=tmp; clear tmp;
-% % % 
-% % % tmp=Zelena1(pocetak :length(Zelena1));
-% % % clear Zelena1; Zelena1=tmp; clear tmp;
-% % % tmp=Zelena2(pocetak :length(Zelena2));
-% % % clear Zelena2; Zelena2=tmp; clear tmp;
-% % % tmp=Zelena3(pocetak :length(Zelena3));
-% % % clear Zelena3; Zelena3=tmp; clear tmp;
+SREDINA=[];
+for i=1:length(Intezitet_2)
+    if isnan(Intezitet_2(i))
+        continue;
+    else
+        SREDINA=[SREDINA,Intezitet_2(i)];
+    end
+end
+
+DOLE=[];
+for i=1:length(Intezitet_3)
+    if isnan(Intezitet_3(i))
+        continue;
+    else
+        DOLE=[DOLE,Intezitet_3(i)];
+    end
+end
+
+OBUKA=[GORE;SREDINA;DOLE];
+
+figure('name','Inteziteti po 500 odiraka');
+title('OBUKA - Sumiranih 500 odbiraka inteziteta');
+hold on;
+plot(GORE,'y')
+plot(SREDINA,'b')
+plot(DOLE,'g')
+hold off;
+legend('GORE - ACC 1','SREDINA - ACC 2','DOLE - ACC 3');
+
+%%
+figure('name','Inteziteti');
+title('Inteziteti NISU NORMALIZOVANI - Svi ACC');
+hold on;
+N_Intezitet_1= N_Zuta1.*N_Zuta1 + N_Zelena1.*N_Zelena1;
+N_Intezitet_2= N_Zuta2.*N_Zuta2 + N_Zelena2.*N_Zelena2;
+N_Intezitet_3= N_Zuta3.*N_Zuta3 + N_Zelena3.*N_Zelena3;
+plot(N_Intezitet_1,'y')
+plot(N_Intezitet_2,'b')
+plot(N_Intezitet_3,'g')
+hold off;
+legend('ACC 1','ACC 2','ACC 3');

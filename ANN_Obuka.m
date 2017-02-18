@@ -1,8 +1,8 @@
 clc;
 clear all;
 close all;
-%filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Cisto_merenje_3_ACC.lvm';
-filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Kombinacije.lvm';
+filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Cisto_merenje_3_ACC.lvm';
+%filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Kombinacije.lvm';
 delimiter = '\t';
 startRow = 25;
 formatSpec = '%f%f%f%f%f%f%f%s%[^\n\r]';
