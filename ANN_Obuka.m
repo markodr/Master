@@ -1,9 +1,10 @@
 clc;
 clear all;
 close all;
+%filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Cisto_merenje_3_ACC.lvm';
 filename = 'C:\Users\Embedded Design\Desktop\LabView Master\Kombinacije.lvm';
 delimiter = '\t';
-startRow = 2;
+startRow = 25;
 formatSpec = '%f%f%f%f%f%f%f%s%[^\n\r]';
 fileID = fopen(filename,'r');
 dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN,'HeaderLines' ,startRow-1, 'ReturnOnError', false);
@@ -25,13 +26,12 @@ DOLE=[];
 CODE=[0;0;1];
 NEMA=[0;0;0];
 
-
 % Vadim sve sa ACC_1
 for i=1:length(ACC_1)
    if isnan(ACC_1(i))
        continue;
    else
-       GORE=[GORE,ACC_1(i)]
+       GORE=[GORE,ACC_1(i)];
    end
     
 end
@@ -41,7 +41,7 @@ for i=1:length(ACC_2)
    if isnan(ACC_2(i))
        continue;
    else
-       SREDINA=[SREDINA,ACC_2(i)]
+       SREDINA=[SREDINA,ACC_2(i)];
    end
     
 end
@@ -51,7 +51,7 @@ for i=1:length(ACC_3)
    if isnan(ACC_3(i))
        continue;
    else
-       DOLE=[DOLE,ACC_3(i)]
+       DOLE=[DOLE,ACC_3(i)];
    end
     
 end
@@ -89,7 +89,7 @@ for i=1:kraj-1
     ose=[ose;[i*prozor,(i+1)*prozor]];
     
 end
-% Prikazujem CEO signal radi biranja signala
+%% Prikazujem CEO signal radi biranja signala
 figure();
 hold on;
 plot(Zuta1);
@@ -99,8 +99,19 @@ hold off;
 title('Kompletan Signal')
 legend('ACC 1','ACC 2','ACC 3');
 
+%% Prikazujem kompletan intezitete
 
-% OBAVEZNO DODATI 0 VEKTOR i SNIMITI GA
+INTEZITET=[GORE;SREDINA;DOLE];
+figure();
+hold on;
+plot(INTEZITET(1,:));
+plot(INTEZITET(2,:));
+plot(INTEZITET(3,:));
+hold off;
+title('INTEZITETI')
+legend('ACC 1','ACC 2','ACC 3');
+
+%% OBAVEZNO DODATI 0 VEKTOR i SNIMITI GA
 
 udarci=[];
 bez_udarca=[];
