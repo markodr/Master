@@ -41,6 +41,6 @@ net = patternnet(10);
 [net,tr] = train(net,Ulaz,Izlaz);
 nntraintool;
 
-save('ANN.mat','net');
-
-save('Signali.mat','MIRUJE','GORE','SREDINA','DOLE');
+%save('ANN.mat','net');
+%save('Signali.mat','MIRUJE','GORE','SREDINA','DOLE');
+%genFunction(net,'ANN_Function');
