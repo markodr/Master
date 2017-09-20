@@ -2,7 +2,7 @@ clc;
 clear all;
 close all;
 
-Broj_semplova=8;
+Broj_semplova=5;
 % Ucitavanje podataka
 [Dole1,Dole2,Dole3] = importfile('DOLEPeakToPeak.lvm',1, Broj_semplova);
 [Sredina1,Sredina2,Sredina3] = importfile('SREDINAPeakToPeak.lvm',1, Broj_semplova);
@@ -41,6 +41,6 @@ net = patternnet(10);
 [net,tr] = train(net,Ulaz,Izlaz);
 nntraintool;
 
-%save('ANN.mat','net');
-%save('Signali.mat','MIRUJE','GORE','SREDINA','DOLE');
-%genFunction(net,'ANN_Function');
+save('ANN.mat','net');
+save('Signali.mat','MIRUJE','GORE','SREDINA','DOLE');
+genFunction(net,'ANN_Function');
