@@ -10,6 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Grafik.ctl" Type="VI" URL="../Grafik.ctl"/>
 		<Item Name="Merenje_3_ACC.vi" Type="VI" URL="../Merenje_3_ACC.vi"/>
 		<Item Name="NOVO Intezitet Senzora.vi" Type="VI" URL="../NOVO Intezitet Senzora.vi"/>
 		<Item Name="NOVO Peak Senzora.vi" Type="VI" URL="../NOVO Peak Senzora.vi"/>
