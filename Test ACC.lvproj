@@ -17,6 +17,7 @@
 		<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
 		<Item Name="SAVE_Punching_Bag.vi" Type="VI" URL="../SAVE_Punching_Bag.vi"/>
 		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
+		<Item Name="SINHRO Peak Senzora.vi" Type="VI" URL="../SINHRO Peak Senzora.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="_2DArrToArrWfms.vi" Type="VI" URL="/&lt;vilib&gt;/sound2/lvsound2.llb/_2DArrToArrWfms.vi"/>
