@@ -11,13 +11,14 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Grafik.ctl" Type="VI" URL="../Grafik.ctl"/>
+		<Item Name="Intezitet Senzora.vi" Type="VI" URL="../Intezitet Senzora.vi"/>
 		<Item Name="Merenje_3_ACC.vi" Type="VI" URL="../Merenje_3_ACC.vi"/>
-		<Item Name="NOVO Intezitet Senzora.vi" Type="VI" URL="../NOVO Intezitet Senzora.vi"/>
-		<Item Name="NOVO Peak Senzora.vi" Type="VI" URL="../NOVO Peak Senzora.vi"/>
 		<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
-		<Item Name="SAVE_Punching_Bag.vi" Type="VI" URL="../SAVE_Punching_Bag.vi"/>
+		<Item Name="Producer Consumer DATA.vi" Type="VI" URL="../Producer Consumer DATA.vi"/>
+		<Item Name="RADI Peak Senzora.vi" Type="VI" URL="../RADI Peak Senzora.vi"/>
+		<Item Name="RADI SINHRO Peak Senzora.vi" Type="VI" URL="../RADI SINHRO Peak Senzora.vi"/>
+		<Item Name="Save_Punching_Bag.vi" Type="VI" URL="../Save_Punching_Bag.vi"/>
 		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
-		<Item Name="SINHRO Peak Senzora.vi" Type="VI" URL="../SINHRO Peak Senzora.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="_2DArrToArrWfms.vi" Type="VI" URL="/&lt;vilib&gt;/sound2/lvsound2.llb/_2DArrToArrWfms.vi"/>
