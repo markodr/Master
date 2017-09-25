@@ -1,6 +1,9 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="17008000">
+	<Property Name="varPersistentID:{7DF237ED-AD13-47A5-8CB2-48F8CD713940}" Type="Ref">/My Computer/iPad.lvlib/Score</Property>
+	<Property Name="varPersistentID:{EB69BF62-E744-461D-808D-7158D6522EF9}" Type="Ref">/My Computer/iPad.lvlib/Iter</Property>
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -10,15 +13,21 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Staro" Type="Folder">
+			<Item Name="Intezitet Senzora.vi" Type="VI" URL="../Intezitet Senzora.vi"/>
+			<Item Name="Merenje_3_ACC.vi" Type="VI" URL="../Merenje_3_ACC.vi"/>
+			<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
+			<Item Name="Producer Consumer Events.vi" Type="VI" URL="../Producer Consumer Events.vi"/>
+			<Item Name="Save_Punching_Bag.vi" Type="VI" URL="../Save_Punching_Bag.vi"/>
+		</Item>
 		<Item Name="Grafik.ctl" Type="VI" URL="../Grafik.ctl"/>
-		<Item Name="Intezitet Senzora.vi" Type="VI" URL="../Intezitet Senzora.vi"/>
-		<Item Name="Merenje_3_ACC.vi" Type="VI" URL="../Merenje_3_ACC.vi"/>
-		<Item Name="Parallel Loops.vi" Type="VI" URL="../Parallel Loops.vi"/>
-		<Item Name="Producer Consumer DATA.vi" Type="VI" URL="../Producer Consumer DATA.vi"/>
 		<Item Name="RADI Peak Senzora.vi" Type="VI" URL="../RADI Peak Senzora.vi"/>
 		<Item Name="RADI SINHRO Peak Senzora.vi" Type="VI" URL="../RADI SINHRO Peak Senzora.vi"/>
-		<Item Name="Save_Punching_Bag.vi" Type="VI" URL="../Save_Punching_Bag.vi"/>
-		<Item Name="Sekvenca (SubVI).vi" Type="VI" URL="../Sekvenca (SubVI).vi"/>
+		<Item Name="Sekvenca SR 1_2_3 (SubVI).vi" Type="VI" URL="../Sekvenca SR 1_2_3 (SubVI).vi"/>
+		<Item Name="Sekvenca EN 1_2_3 (SubVI).vi" Type="VI" URL="../Sekvenca EN 1_2_3 (SubVI).vi"/>
+		<Item Name="Sekvenca Kombinacije (SubVI).vi" Type="VI" URL="../Sekvenca Kombinacije (SubVI).vi"/>
+		<Item Name="Producer Consumer Data.vi" Type="VI" URL="../Producer Consumer Data.vi"/>
+		<Item Name="iPad.lvlib" Type="Library" URL="../iPad.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="_2DArrToArrWfms.vi" Type="VI" URL="/&lt;vilib&gt;/sound2/lvsound2.llb/_2DArrToArrWfms.vi"/>
