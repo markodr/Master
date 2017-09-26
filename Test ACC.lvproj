@@ -1,7 +1,11 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="17008000">
+	<Property Name="varPersistentID:{24687DA9-C9B6-4447-9BF9-AB39F293BF12}" Type="Ref">/My Computer/iPad.lvlib/LED 1</Property>
+	<Property Name="varPersistentID:{40B391E8-7858-4508-B0A0-5A46A7A55345}" Type="Ref">/My Computer/iPad.lvlib/Speed</Property>
+	<Property Name="varPersistentID:{74F071E7-20A5-4D6A-97F4-9AF5450DF3C2}" Type="Ref">/My Computer/iPad.lvlib/Iter</Property>
 	<Property Name="varPersistentID:{7DF237ED-AD13-47A5-8CB2-48F8CD713940}" Type="Ref">/My Computer/iPad.lvlib/Score</Property>
-	<Property Name="varPersistentID:{EB69BF62-E744-461D-808D-7158D6522EF9}" Type="Ref">/My Computer/iPad.lvlib/Iter</Property>
+	<Property Name="varPersistentID:{8A9A6DE6-CE2F-4B26-97DD-E307B1524583}" Type="Ref">/My Computer/iPad.lvlib/LED 2</Property>
+	<Property Name="varPersistentID:{DAF30F32-0F6F-4D1D-89D1-FA2F760223C7}" Type="Ref">/My Computer/iPad.lvlib/LED 3</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
